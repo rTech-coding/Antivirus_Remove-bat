@@ -1,6 +1,6 @@
 ⚠️ Windows Security Removal Script
 
-Autor: Yairon Jesus Perez Barreda
+Autor: Yairon y rTech
 
 
 Version : 3.0
@@ -13,7 +13,7 @@ Este proyecto contiene un script por lotes de Windows (.bat) que intenta desacti
 Su ejecución puede dejar el equipo vulnerable, provocar errores graves en Windows y requerir una reparación o reinstalación del sistema.
 
 ---------------------------------------------------------------
-ejecutar prioritariamente el .bat con permisos de administrador
+Ejecutar prioritariamente el .bat con permisos de administrador
 ---------------------------------------------------------------
 
 ////////////////////////////////////////////////////////////////////////////////////////////////
@@ -30,12 +30,12 @@ eliminar archivos importantes de Windows. No lo ejecuten en su equipo principal.
 ------------------------------------------------------------------------------------------------
 
 
-Quiero informar que este proyecto esta en fase de revisión y puede contener errores
+Quiero informar que este proyecto esta en fase de revisión y puede contener errores...
 
 
 📌 Descripción del proyecto
 
-Este proyecto, desarrollado por Yairon Jesus Perez Barreda, tiene como objeto el análisis técnico de un script de Windows que modifica configuraciones de seguridad y elimina componentes del sistema.
+Este proyecto, desarrollado por Yairon y rTech, tiene como objeto el análisis técnico de un script de Windows que modifica configuraciones de seguridad y elimina componentes del sistema.
 
 El código permite estudiar el funcionamiento de comandos administrativos de Windows y comprender los riesgos asociados a la ejecución de scripts con privilegios elevados.
 
@@ -195,6 +195,8 @@ Plataforma: Microsoft Windows.
 Formato: archivo por lotes (.bat).
 
 Este repositorio se presenta con fines de documentación, aprendizaje e investigación autorizada. El autor no recomienda ejecutar el script en sistemas reales, debido a los riesgos que implica para la seguridad y la integridad del sistema operativo.
+
+##Creado por rTech y Yairo-Scrypting.
 
 
 
